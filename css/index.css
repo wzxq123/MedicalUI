@@ -1,0 +1,29 @@
+/* Index styles
+-------------------------------------------------- */
+
+.my-navigation {
+	height: 60px;
+	padding: 10px;
+	color: white;
+	font-size: 20px;
+}
+.my-container {
+	margin-top: 60px;
+}
+.my-sidebar {
+	position: fixed;
+	top: 60px;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	display: block;
+	padding: 20px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color: #f5f5f5;
+	border-right: 1px solid #eee;
+}
+.my-main {
+	float: right;
+	padding: 20px;
+}
