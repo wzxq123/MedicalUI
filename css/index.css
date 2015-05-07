@@ -5,6 +5,7 @@
 	height: 60px;
 	padding: 10px;
 	color: white;
+	background-color: #428bca;
 	font-size: 20px;
 }
 .my-container {
@@ -25,5 +26,39 @@
 }
 .my-main {
 	float: right;
-	padding: 20px;
+	padding: 10px;
+	border: 1px solid #eee;
+}
+
+.my-toolbar{
+	width: 100%;
+	height: 120px;
+	padding: 10px;
+	border: 1px solid #eee;
+}
+
+.my-info{
+	width: 100%;
+	height: 650px;
+	margin-top: 10px;
+	left: 0;
+	right: 0;
+	/*border: 1px solid #eee;*/
+}
+
+.patient-info{
+	height: 600px;
+	margin-top: 10px;
+	padding-top: 10px;
+	left: 0;
+	right: 0;
+	border-right: 1px solid #eee;
+}
+
+.medical-data{
+	height: 600px;
+	margin-top: 10px;
+	left: 0;
+	right: 0;
+	/*border: 1px solid #eee;*/
 }

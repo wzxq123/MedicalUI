@@ -9,9 +9,9 @@
 		<title>MedicalUI Index</title>
 
 		<!-- Bootstrap -->
-		<link href="resource/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 		<link href="css/index.css" rel="stylesheet">
-		<link href="css/sticky-footer.css" rel="stylesheet">
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -22,7 +22,39 @@
 
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top my-navigation">
-			标题
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2">
+						标题
+					</div>
+					<div class="col-md-10">
+						<ul class="nav navbar-nav hidden-sm hidden-xs">
+							<li>
+								<a href="#">
+									控制台
+								</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								下拉菜单
+								</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">
+											<i class="glyphicon glyphicon-flag"></i> 实例#1
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="glyphicon glyphicon-qrcode"></i> 实例#2
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</nav>
 
 		<div class="container-fluid my-container">
@@ -31,7 +63,60 @@
 					menu
 				</div>
 				<div class="col-md-10 my-main">
-					main
+					<div class="row my-toolbar">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="col-md-5">
+									<label class="col-md-2 control-label">系统</label>
+								</div>
+								<div class="col-md-5">
+									<label class="col-md-2 control-label">项目</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-5">
+									<div class="form-group">
+										<label for="dtp_input2" class="col-md-2 control-label">时间</label>
+										<div class="input-group date form_date col-md-5" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+											<input class="form-control" size="16" type="text" value="" readonly>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+											<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+										</div>
+										<input type="hidden" id="dtp_input2" value="" />
+										<br/>
+									</div>
+								</div>
+								<div class="col-md-5">
+									<label class="col-md-2 control-label">干预</label>
+								</div>
+								<div class="col-md-2">
+									<button type="button" class="btn btn-primary">查  询</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row my-info">
+						<div class="col-md-3 patient-info">
+							<label>患者信息</label>
+							<table class="table table-hover">
+								<tr>
+									<td>姓名</td>
+									<td>张三</td>
+								</tr>
+								<tr>
+									<td>性别</td>
+									<td>男</td>
+								</tr>
+								<tr>
+									<td>年龄</td>
+									<td>39</td>
+								</tr>
+							</table>
+						</div>
+						<div class="col-md-9 medical-data">
+							medical data
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -39,7 +124,20 @@
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="resource/bootstrap/js/bootstrap.min.js"></script>
+		<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+		<script src="plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+		<script type="text/javascript">
+			$('.form_date').datetimepicker({
+				language: 'zh-CN',
+				weekStart: 1,
+				todayBtn: 1,
+				autoclose: 1,
+				todayHighlight: 1,
+				startView: 2,
+				minView: 2,
+				forceParse: 0
+			});
+		</script>
 	</body>
 
 </html>
